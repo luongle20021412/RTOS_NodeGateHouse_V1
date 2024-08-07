@@ -1,6 +1,6 @@
 Dependencies for Project 'RTOS_NodeGateHouse_V1', Target 'RTOS_NodeGateHouse_V1': (DO NOT MODIFY !)
-F (startup_stm32f103xb.s)(0x66A7265E)(--cpu Cortex-M3 -g --apcs=interwork -I ..\Core\Inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o rtos_nodegatehouse_v1\startup_stm32f103xb.o --depend rtos_nodegatehouse_v1\startup_stm32f103xb.d)
-F (../Core/Src/main.c)(0x66A72BEC)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\main.o --omf_browse rtos_nodegatehouse_v1\main.crf --depend rtos_nodegatehouse_v1\main.d)
+F (startup_stm32f103xb.s)(0x66B2DEE1)(--cpu Cortex-M3 -g --apcs=interwork -I ..\Core\Inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o rtos_nodegatehouse_v1\startup_stm32f103xb.o --depend rtos_nodegatehouse_v1\startup_stm32f103xb.d)
+F (../Core/Src/main.c)(0x66B36CF1)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\main.o --omf_browse rtos_nodegatehouse_v1\main.crf --depend rtos_nodegatehouse_v1\main.d)
 I (../Core/Inc/main.h)(0x66A71E66)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x65FADCB3)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x66A72659)
@@ -31,7 +31,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x65FADCB3)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -43,11 +43,20 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65FADCA4)
-F (../Core/Src/freertos.c)(0x66A71E65)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\freertos.o --omf_browse rtos_nodegatehouse_v1\freertos.crf --depend rtos_nodegatehouse_v1\freertos.d)
+I (../Lib/inc/TASK_DATA.h)(0x66B380A6)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
+I (../Lib/inc/Flash.h)(0x66B382DC)
+I (../Lib/inc/RFID_RCC522.h)(0x65FD12B2)
+I (../Lib/inc/MY_NRF24.h)(0x65FCF993)
+I (../Lib/inc/nRF24L01.h)(0x65FCF993)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB87F2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB87EE)
+I (../Lib/inc/LCD20X4.h)(0x662909E3)
+F (../Core/Src/freertos.c)(0x66A8E17E)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\freertos.o --omf_browse rtos_nodegatehouse_v1\freertos.crf --depend rtos_nodegatehouse_v1\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -112,7 +121,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x65FADCB3)
 I (../Core/Inc/stm32f1xx_it.h)(0x66A71E65)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -573,7 +582,7 @@ F (../Middlewares/Third_Party/FreeRTOS/Source/croutine.c)(0x65FADCA4)(--c99 -c -
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -587,7 +596,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB87F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -602,7 +611,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB87F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -615,7 +624,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -629,7 +638,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -644,7 +653,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -659,7 +668,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB87F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -675,7 +684,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -688,12 +697,12 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65FADCA4)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x65FADCA1)
-F (../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_3.c)(0x65FADCA4)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\heap_3.o --omf_browse rtos_nodegatehouse_v1\heap_3.crf --depend rtos_nodegatehouse_v1\heap_3.d)
+F (../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c)(0x65FADCA4)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\heap_4.o --omf_browse rtos_nodegatehouse_v1\heap_4.crf --depend rtos_nodegatehouse_v1\heap_4.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB87F2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -705,7 +714,7 @@ F (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c)(0x65
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -743,7 +752,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x65FADCB3)
 F (..\Lib\snc\Flash.c)(0x6629FCD4)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\flash.o --omf_browse rtos_nodegatehouse_v1\flash.crf --depend rtos_nodegatehouse_v1\flash.d)
-I (../Lib/inc/Flash.h)(0x66364C81)
+I (../Lib/inc/Flash.h)(0x66B382DC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x65FADCB3)
@@ -863,13 +872,13 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x65FADCB3)
-F (.\Task\Task_Add.c)(0x66A72C08)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\task_add.o --omf_browse rtos_nodegatehouse_v1\task_add.crf --depend rtos_nodegatehouse_v1\task_add.d)
-I (../Lib/inc/TASK_DATA.h)(0x66A72B7A)
+F (.\Task\Task_Add.c)(0x66B382DC)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\task_add.o --omf_browse rtos_nodegatehouse_v1\task_add.crf --depend rtos_nodegatehouse_v1\task_add.d)
+I (../Lib/inc/TASK_DATA.h)(0x66B380A6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -907,13 +916,14 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x65FADCB3)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
-F (.\Task\Task_Card.c)(0x66A725DA)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\task_card.o --omf_browse rtos_nodegatehouse_v1\task_card.crf --depend rtos_nodegatehouse_v1\task_card.d)
-I (../Lib/inc/TASK_DATA.h)(0x66A72B7A)
+I (../Lib/inc/Flash.h)(0x66B382DC)
+F (.\Task\Task_Card.c)(0x66B383E8)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\task_card.o --omf_browse rtos_nodegatehouse_v1\task_card.crf --depend rtos_nodegatehouse_v1\task_card.d)
+I (../Lib/inc/TASK_DATA.h)(0x66B380A6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -951,15 +961,15 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x65FADCB3)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
+I (../Lib/inc/Flash.h)(0x66B382DC)
 I (../Lib/inc/RFID_RCC522.h)(0x65FD12B2)
-I (../Core/Inc/main.h)(0x66A71E66)
-F (.\Task\Task_ChangePass.c)(0x66A7259E)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\task_changepass.o --omf_browse rtos_nodegatehouse_v1\task_changepass.crf --depend rtos_nodegatehouse_v1\task_changepass.d)
-I (../Lib/inc/TASK_DATA.h)(0x66A72B7A)
+F (.\Task\Task_Keypad.c)(0x66B2E4FF)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\task_keypad.o --omf_browse rtos_nodegatehouse_v1\task_keypad.crf --depend rtos_nodegatehouse_v1\task_keypad.d)
+I (../Lib/inc/TASK_DATA.h)(0x66B380A6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -997,13 +1007,14 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x65FADCB3)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
-F (.\Task\Task_Keypad.c)(0x66A72BC5)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\task_keypad.o --omf_browse rtos_nodegatehouse_v1\task_keypad.crf --depend rtos_nodegatehouse_v1\task_keypad.d)
-I (../Lib/inc/TASK_DATA.h)(0x66A72B7A)
+I (../Lib/inc/Flash.h)(0x66B382DC)
+F (.\Task\Task_LCD.c)(0x66B36BBF)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\task_lcd.o --omf_browse rtos_nodegatehouse_v1\task_lcd.crf --depend rtos_nodegatehouse_v1\task_lcd.d)
+I (../Lib/inc/TASK_DATA.h)(0x66B380A6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -1041,58 +1052,15 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x65FADCB3)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
-F (.\Task\Task_LCD.c)(0x66A72C57)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\task_lcd.o --omf_browse rtos_nodegatehouse_v1\task_lcd.crf --depend rtos_nodegatehouse_v1\task_lcd.d)
-I (../Lib/inc/TASK_DATA.h)(0x66A72B7A)
-I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65FADCA4)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x65FADCB3)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x65FADCB3)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x65FADCA1)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x65FADCA1)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x65FADCA1)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x65FADCA1)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x65FADCB3)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x66A72659)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x65FADCB3)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
+I (../Lib/inc/Flash.h)(0x66B382DC)
 I (../Lib/inc/LCD20X4.h)(0x662909E3)
-F (.\Task\Task_Pass.c)(0x66A7259E)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\task_pass.o --omf_browse rtos_nodegatehouse_v1\task_pass.crf --depend rtos_nodegatehouse_v1\task_pass.d)
-I (../Lib/inc/TASK_DATA.h)(0x66A72B7A)
+F (.\Task\Task_Pass.c)(0x66B35BC2)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\task_pass.o --omf_browse rtos_nodegatehouse_v1\task_pass.crf --depend rtos_nodegatehouse_v1\task_pass.d)
+I (../Lib/inc/TASK_DATA.h)(0x66B380A6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -1130,13 +1098,14 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x65FADCB3)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
+I (../Lib/inc/Flash.h)(0x66B382DC)
 F (.\Task\Task_NRF.c)(0x66A7259E)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\task_nrf.o --omf_browse rtos_nodegatehouse_v1\task_nrf.crf --depend rtos_nodegatehouse_v1\task_nrf.d)
-I (../Lib/inc/TASK_DATA.h)(0x66A72B7A)
+I (../Lib/inc/TASK_DATA.h)(0x66B380A6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
+I (../Core/Inc/FreeRTOSConfig.h)(0x66A8E4F4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
@@ -1174,47 +1143,4 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x65FADCB3)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x65FADCB3)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
-F (.\Task\Task_Remove.c)(0x66A7259E)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/inc-I.\RTE\_RTOS_NodeGateHouse_V1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o rtos_nodegatehouse_v1\task_remove.o --omf_browse rtos_nodegatehouse_v1\task_remove.crf --depend rtos_nodegatehouse_v1\task_remove.d)
-I (../Lib/inc/TASK_DATA.h)(0x66A72B7A)
-I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x65FADCA4)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB87F2)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
-I (../Core/Inc/FreeRTOSConfig.h)(0x66A71E65)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x65FADCA4)
-I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x65FADCA4)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x65FADCB3)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x65FADCB3)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x65FADCA1)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x65FADCA1)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x65FADCA1)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x65FADCA1)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x65FADCB3)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x66A72659)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x65FADCB3)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x65FADCB3)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB87F2)
+I (../Lib/inc/Flash.h)(0x66B382DC)

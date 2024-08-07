@@ -43,5 +43,5 @@ rtos_nodegatehouse_v1\task_card.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx
 rtos_nodegatehouse_v1\task_card.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 rtos_nodegatehouse_v1\task_card.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 rtos_nodegatehouse_v1\task_card.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+rtos_nodegatehouse_v1\task_card.o: ../Lib/inc/Flash.h
 rtos_nodegatehouse_v1\task_card.o: ../Lib/inc/RFID_RCC522.h
-rtos_nodegatehouse_v1\task_card.o: ../Core/Inc/main.h

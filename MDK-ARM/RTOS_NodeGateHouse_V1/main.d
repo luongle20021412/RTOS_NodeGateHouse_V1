@@ -42,3 +42,13 @@ rtos_nodegatehouse_v1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include
 rtos_nodegatehouse_v1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 rtos_nodegatehouse_v1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 rtos_nodegatehouse_v1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+rtos_nodegatehouse_v1\main.o: ../Lib/inc/TASK_DATA.h
+rtos_nodegatehouse_v1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+rtos_nodegatehouse_v1\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+rtos_nodegatehouse_v1\main.o: ../Lib/inc/Flash.h
+rtos_nodegatehouse_v1\main.o: ../Lib/inc/RFID_RCC522.h
+rtos_nodegatehouse_v1\main.o: ../Lib/inc/MY_NRF24.h
+rtos_nodegatehouse_v1\main.o: ../Lib/inc/nRF24L01.h
+rtos_nodegatehouse_v1\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+rtos_nodegatehouse_v1\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+rtos_nodegatehouse_v1\main.o: ../Lib/inc/LCD20X4.h

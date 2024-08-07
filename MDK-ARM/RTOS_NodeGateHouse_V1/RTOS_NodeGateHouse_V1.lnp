@@ -27,7 +27,7 @@
 "rtos_nodegatehouse_v1\tasks.o"
 "rtos_nodegatehouse_v1\timers.o"
 "rtos_nodegatehouse_v1\cmsis_os.o"
-"rtos_nodegatehouse_v1\heap_3.o"
+"rtos_nodegatehouse_v1\heap_4.o"
 "rtos_nodegatehouse_v1\port.o"
 "rtos_nodegatehouse_v1\delay.o"
 "rtos_nodegatehouse_v1\flash.o"
@@ -36,12 +36,10 @@
 "rtos_nodegatehouse_v1\rfid_rcc522.o"
 "rtos_nodegatehouse_v1\task_add.o"
 "rtos_nodegatehouse_v1\task_card.o"
-"rtos_nodegatehouse_v1\task_changepass.o"
 "rtos_nodegatehouse_v1\task_keypad.o"
 "rtos_nodegatehouse_v1\task_lcd.o"
 "rtos_nodegatehouse_v1\task_pass.o"
 "rtos_nodegatehouse_v1\task_nrf.o"
-"rtos_nodegatehouse_v1\task_remove.o"
 --strict --scatter "RTOS_NodeGateHouse_V1\RTOS_NodeGateHouse_V1.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

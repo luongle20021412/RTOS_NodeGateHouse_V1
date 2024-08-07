@@ -1,20 +1,21 @@
-#include <TASK_DATA.h>
+#include "TASK_DATA.h"
 #include "LCD20X4.h"
 
-extern osMessageQId xQueueSendDataLCD;
+extern osMessageQId xQueueDataTaskCradSendCardID_State_tHandle;
+extern osMessageQId xQueueDataTaskCardSendMasterCard_State_tHandle;
 
-
-void TaskLCD(void *argument)
+void TaskLCD(void const* argument)
 {
 	static Data_Card_t DataCardSendLCD;
 	static CardID_State_t CardID_Status;
+	static MasterCard_State_t MasterState;
 	static uint8_t keyLCD;
 	for(;;)
 	{
 		//Data Card
-		if(xQueueReceive(xQueueSendDataLCD,&DataCardSendLCD,portMAX_DELAY) == pdPASS)
+		if(xQueueReceive(xQueueDataTaskCradSendCardID_State_tHandle,&CardID_Status,portMAX_DELAY) == pdPASS)
 		{
-			if(DataCardSendLCD.CardID[0] == DataCardSendLCD.Master_Card[0] && DataCardSendLCD.CardID[1] == DataCardSendLCD.Master_Card[1] && DataCardSendLCD.CardID[2] == DataCardSendLCD.Master_Card[2] && DataCardSendLCD.CardID[3] == DataCardSendLCD.Master_Card[3] && DataCardSendLCD.CardID[4] == DataCardSendLCD.Master_Card[4])
+			if(CardID_Status == Master_Card)
 			{
 				LCD20X4_Gotoxy(0,2);
 				LCD20X4_PutString("Card MAster");
@@ -23,6 +24,17 @@ void TaskLCD(void *argument)
 			{
 				LCD20X4_Gotoxy(1,2);
 				LCD20X4_PutString("Card slaver");
+			}
+		}
+		if(xQueueReceive(xQueueDataTaskCardSendMasterCard_State_tHandle, &MasterState, portMAX_DELAY) == pdPASS)
+		{
+			if( MasterState == AddRemoveSlaveCard)
+			{
+				
+			}
+			if( MasterState == CreatChangPass)
+			{
+				
 			}
 		}
 	}

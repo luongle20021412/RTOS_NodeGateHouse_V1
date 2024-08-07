@@ -1,45 +1,10 @@
-/* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2024 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
-/* USER CODE END Header */
-/* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "TASK_DATA.h"
+#include "RFID_RCC522.h"
+#include "MY_NRF24.h"
+#include "LCD20X4.h"
 
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
-
-/* USER CODE END Includes */
-
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
 SPI_HandleTypeDef hspi1;
 
 TIM_HandleTypeDef htim2;
@@ -48,16 +13,14 @@ TIM_HandleTypeDef htim4;
 osThreadId KeyPadHandle;
 osThreadId CardHandle;
 osThreadId LCDHandle;
-osThreadId ADDHandle;
-osThreadId PassHandle;
-osThreadId RemoveHandle;
+osThreadId AddHandle;
 osThreadId NRFHandle;
-osMessageQId xQueueSendDataLCDHandle;
-/* USER CODE BEGIN PV */
 
-/* USER CODE END PV */
+osMessageQId xQueueDataTaskCradSendCardID_State_tHandle;
+osMessageQId xQueueDataTaskCardSendMasterCard_State_tHandle;
+osMessageQId xQueueDataTaskCardSendData_Card_tHandle;
 
-/* Private function prototypes -----------------------------------------------*/
+
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM2_Init(void);
@@ -66,122 +29,69 @@ static void MX_SPI1_Init(void);
 void TaskKeypad(void const * argument);
 void TaskCard(void const * argument);
 void TaskLCD(void const * argument);
-void TaskAdd(void const * argument);
-void TaskPass(void const * argument);
-void TaskRemove(void const * argument);
+void TaskAdd(void const* argument);
 void TaskNRF(void const * argument);
 
-/* USER CODE BEGIN PFP */
-
-/* USER CODE END PFP */
-
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
-
-/* USER CODE END 0 */
-
-/**
-  * @brief  The application entry point.
-  * @retval int
-  */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
 
-  /* USER CODE END 1 */
-
-  /* MCU Configuration--------------------------------------------------------*/
-
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
   SystemClock_Config();
 
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
-  /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM2_Init();
   MX_TIM4_Init();
   MX_SPI1_Init();
-  /* USER CODE BEGIN 2 */
+	MFRC522_Init();
+	LCD20X4_Init();
+	
+  //config NRF
+	NRF24_Begin(hspi1,SPI1_Port,SPI1_CS_PIN,SPI1_CE_PIN);
+    NRF24_OpenWritingPipe(Address_NodeGate);
+    NRF24_OpenReadingPipe(1,Address_NodeGate);
+    NRF24_SetPALevel(RF24_PA_0dB);
+    NRF24_SetDataRate(RF24_250KBPS);
+    NRF24_SetChannel(52);
+    NRF24_EnableDynamicPayloads();
+    NRF24_SetAutoAck(true);
+    NRF24_SetRetries(10,15);
+    NRF24_StartListening();
+	
+//Create Queue
 
-  /* USER CODE END 2 */
+  osMessageQDef(SendCardID_State_t, 5, sizeof(CardID_State_t));
+  xQueueDataTaskCradSendCardID_State_tHandle = osMessageCreate(osMessageQ(SendCardID_State_t), NULL);
 
-  /* USER CODE BEGIN RTOS_MUTEX */
-  /* add mutexes, ... */
-  /* USER CODE END RTOS_MUTEX */
-
-  /* USER CODE BEGIN RTOS_SEMAPHORES */
-  /* add semaphores, ... */
-  /* USER CODE END RTOS_SEMAPHORES */
-
-  /* USER CODE BEGIN RTOS_TIMERS */
-  /* start timers, add new ones, ... */
-  /* USER CODE END RTOS_TIMERS */
-
-  /* Create the queue(s) */
-  /* definition and creation of xQueueSendDataLCD */
-  osMessageQDef(xQueueSendDataLCD, 65, uint16_t);
-  xQueueSendDataLCDHandle = osMessageCreate(osMessageQ(xQueueSendDataLCD), NULL);
-
-  /* USER CODE BEGIN RTOS_QUEUES */
-  /* add queues, ... */
-  /* USER CODE END RTOS_QUEUES */
-
-  /* Create the thread(s) */
-  /* definition and creation of KeyPad */
-  osThreadDef(KeyPad, TaskKeypad, osPriorityNormal, 0, 128);
+  osMessageQDef(SendMasterCard_State_t, 5, sizeof(MasterCard_State_t));
+  xQueueDataTaskCardSendMasterCard_State_tHandle = osMessageCreate(osMessageQ(SendMasterCard_State_t), NULL);
+  
+  osMessageQDef(SendData_card_t, 16, sizeof(Data_Card_t));
+  xQueueDataTaskCardSendData_Card_tHandle = osMessageCreate(osMessageQ(SendData_card_t), NULL);
+  
+ //Create Task
+ 
+  osThreadDef(KeyPad, TaskKeypad, 1, 0, 128);
   KeyPadHandle = osThreadCreate(osThread(KeyPad), NULL);
 
   /* definition and creation of Card */
-  osThreadDef(Card, TaskCard, osPriorityIdle, 0, 128);
+  osThreadDef(Card, TaskCard, 1, 0, 128);
   CardHandle = osThreadCreate(osThread(Card), NULL);
 
   /* definition and creation of LCD */
-  osThreadDef(LCD, TaskLCD, osPriorityIdle, 0, 128);
+  osThreadDef(LCD, TaskLCD, 1, 0, 128);
   LCDHandle = osThreadCreate(osThread(LCD), NULL);
 
-  /* definition and creation of ADD */
-  osThreadDef(ADD, TaskAdd, osPriorityIdle, 0, 128);
-  ADDHandle = osThreadCreate(osThread(ADD), NULL);
-
   /* definition and creation of Pass */
-  osThreadDef(Pass, TaskPass, osPriorityIdle, 0, 128);
-  PassHandle = osThreadCreate(osThread(Pass), NULL);
-
-  /* definition and creation of Remove */
-  osThreadDef(Remove, TaskRemove, osPriorityIdle, 0, 128);
-  RemoveHandle = osThreadCreate(osThread(Remove), NULL);
+  osThreadDef(Add, TaskAdd, 2, 0, 128);
+  AddHandle = osThreadCreate(osThread(Add), NULL);
 
   /* definition and creation of NRF */
-  osThreadDef(NRF, TaskNRF, osPriorityIdle, 0, 128);
+  osThreadDef(NRF, TaskNRF, 1, 0, 128);
   NRFHandle = osThreadCreate(osThread(NRF), NULL);
 
-  /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
-  /* USER CODE END RTOS_THREADS */
-
-  /* Start scheduler */
   osKernelStart();
 
-  /* We should never get here as control is now taken by the scheduler */
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
-  }
-  /* USER CODE END 3 */
+  while (1);
 }
 
 /**
@@ -378,27 +288,76 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, CS_RFID_Pin|GPIO_PIN_8|GPIO_PIN_9, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin : PA4 */
-  GPIO_InitStruct.Pin = GPIO_PIN_4;
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_12|GPIO_PIN_13
+                          |GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
+  
+  GPIO_InitStruct.Pin = CS_RFID_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+    /*Configure GPIO pins : PA8 PA9 */
+
+   GPIO_InitStruct.Pin =GPIO_PIN_8|GPIO_PIN_9;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  
+  /*Configure GPIO pins : PB0 PB1 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  GPIO_InitStruct.Pin = GPIO_PIN_7|GPIO_PIN_8;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ /*Configure GPIO pins : PB12 PB13
+                           PB14 PB15 */
+ GPIO_InitStruct.Pin = GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13
+                          |GPIO_PIN_14|GPIO_PIN_15;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  
+  /* configure GPIO pin:13 */
+  
+  GPIO_InitStruct.Pin = GPIO_PIN_13;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+  
+  
+ /* Config GPIO KeyPad 4x4 */
+	GPIO_InitStruct.Pin =ROW_3_Pin | ROW_4_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	GPIO_InitStruct.Pull = GPIO_PULLUP;
+	HAL_GPIO_Init(ROW_PORT_B, &GPIO_InitStruct);
+	
+	GPIO_InitStruct.Pin = ROW_1_Pin | ROW_2_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	GPIO_InitStruct.Pull = GPIO_PULLUP;
+	HAL_GPIO_Init(ROW_PORT, &GPIO_InitStruct);
+  
+	GPIO_InitStruct.Pin = COL_1_Pin | COL_2_Pin | COL_3_Pin | COL_4_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(COL_PORT, &GPIO_InitStruct);
+
 }
 
-/* USER CODE BEGIN 4 */
-
-/* USER CODE END 4 */
-
-/**
-  * @brief  This function is executed in case of error occurrence.
-  * @retval None
-  */
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */

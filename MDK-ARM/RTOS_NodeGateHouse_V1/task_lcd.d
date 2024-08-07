@@ -43,4 +43,5 @@ rtos_nodegatehouse_v1\task_lcd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_
 rtos_nodegatehouse_v1\task_lcd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 rtos_nodegatehouse_v1\task_lcd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 rtos_nodegatehouse_v1\task_lcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+rtos_nodegatehouse_v1\task_lcd.o: ../Lib/inc/Flash.h
 rtos_nodegatehouse_v1\task_lcd.o: ../Lib/inc/LCD20X4.h

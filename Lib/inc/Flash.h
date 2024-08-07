@@ -18,9 +18,7 @@
 #define Page_addres_1 		_PAGE_61_
 #define Page_addres_2 		_PAGE_62_
 #define Page_addres_3 		_PAGE_63_
-#define Page_addres_Pass 	_PAGE_60_
-#define Page_addres_Name	_PAGE_59_
-#define Page_addres_QuantitySlave _PAGE_58_
+#define Page_QuantitySlave _PAGE_58_
 #define Page_addres_Gate 	_PAGE_57_
 
 void Flash_Erase(uint32_t Address);
